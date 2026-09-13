@@ -22,8 +22,7 @@ project devops gitops/
 │   ├── prometheus/               # Cấu hình Scrape & Alert Rules
 │   ├── alertmanager/             # Cấu hình Bắn Alert Telegram/Discord
 │   └── docker-compose.monitoring.yml # Dựng Prometheus + Grafana + Alertmanager
-├── DEVOPS_GUIDE.md               # Sách lược và tài liệu hướng dẫn phỏng vấn
-└── DEVOPS_INTERVIEW_KNOWLEDGE_BASE.md
+└── README.md
 ```
 
 ---

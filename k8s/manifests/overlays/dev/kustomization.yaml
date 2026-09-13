@@ -9,7 +9,7 @@ resources:
 namePrefix: dev-
 
 images:
-  - name: ghcr.io/your-username/devops-backend
+  - name: ghcr.io/baongdqu/project-devops-webserver/backend
     newTag: sha-10cea0d
-  - name: ghcr.io/your-username/devops-frontend
+  - name: ghcr.io/baongdqu/project-devops-webserver/frontend
     newTag: sha-10cea0d

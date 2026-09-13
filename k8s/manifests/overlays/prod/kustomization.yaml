@@ -9,10 +9,10 @@ resources:
 namePrefix: prod-
 
 images:
-  - name: ghcr.io/your-username/devops-backend
-    newTag: v1.0.0
-  - name: ghcr.io/your-username/devops-frontend
-    newTag: v1.0.0
+  - name: ghcr.io/baongdqu/project-devops-webserver/backend
+    newTag: sha-10cea0d
+  - name: ghcr.io/baongdqu/project-devops-webserver/frontend
+    newTag: sha-10cea0d
 
 patches:
   - target:

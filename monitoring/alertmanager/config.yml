@@ -1,0 +1,17 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname', 'severity']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+  receiver: 'telegram-notifications'
+
+receivers:
+  - name: 'telegram-notifications'
+    telegram_configs:
+      - bot_token: 'YOUR_TELEGRAM_BOT_TOKEN'
+        chat_id: 123456789
+        send_resolved: true
+        message: "🚨 *[ALERT {{ .Status | toUpper }}]*: {{ .CommonAnnotations.summary }}\n\n📌 *Mô tả*: {{ .CommonAnnotations.description }}\n⚠️ *Mức độ*: `{{ .CommonLabels.severity }}`"

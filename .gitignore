@@ -1,0 +1,29 @@
+# .gitignore for GitOps & Infrastructure Repository
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Secrets (Không bao giờ commit secrets)
+*.pem
+*.key
+*.crt
+secret*.yaml
+*-secret.yaml
+.env

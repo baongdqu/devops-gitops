@@ -1,0 +1,22 @@
+groups:
+  - name: devops_alerts
+    rules:
+      # 1. Cảnh báo khi Backend API bị sập
+      - alert: BackendServiceDown
+        expr: up{job="devops-backend-api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Backend API Service is DOWN"
+          description: "Instance {{ $labels.instance }} của backend service không phản hồi hơn 1 phút."
+
+      # 2. Cảnh báo Request Latency cao
+      - alert: HighRequestLatency
+        expr: rate(http_request_duration_seconds_sum[2m]) / rate(http_request_duration_seconds_count[2m]) > 1
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Latency Detected on API"
+          description: "Độ trễ phản hồi API trung bình > 1s trong 2 phút vừa qua."

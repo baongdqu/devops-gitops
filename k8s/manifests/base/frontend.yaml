@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: devops-frontend:local
+          image: ghcr.io/baongdqu/project-devops-webserver/frontend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80

@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/baongdqu/project-devops-webserver/backend:latest
+          image: ghcr.io/baongdqu/devops-webserver/backend:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000

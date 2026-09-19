@@ -9,9 +9,9 @@ resources:
 namePrefix: prod-
 
 images:
-  - name: ghcr.io/baongdqu/project-devops-webserver/backend
+  - name: ghcr.io/baongdqu/devops-webserver/backend
     newTag: sha-10cea0d
-  - name: ghcr.io/baongdqu/project-devops-webserver/frontend
+  - name: ghcr.io/baongdqu/devops-webserver/frontend
     newTag: sha-10cea0d
 
 patches:
